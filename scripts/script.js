@@ -16,6 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(worldWonders);
     worldWonders.forEach((wonder) => {
       const div = document.createElement("div");
+      const viewMore = document.createElement("button");
+      viewMore.style.display = "block";
+      viewMore.textContent = "View More";
+      viewMore.style.margin = "10px auto";
+      //https://medium.com/@cyberbotmachines/how-to-pass-value-from-one-html-page-to-another-using-javascript-3c9ab62df4d
+      viewMore.addEventListener("click", () => {
+        let name = wonder.name.toLowerCase().replaceAll(" ", "-");
+        localStorage.setItem("name", name);
+        window.location.href = "wonder.html";
+      });
+
+      //
       div.classList.add("wonder", "text-center");
       const h2 = document.createElement("h2");
       const p = document.createElement("p");
@@ -31,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       div.appendChild(h2);
       div.appendChild(p);
       div.appendChild(link);
+      div.appendChild(viewMore);
       worldList.appendChild(div);
     });
   });
