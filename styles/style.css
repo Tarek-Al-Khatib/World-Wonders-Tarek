@@ -1,10 +1,8 @@
 .wonder img,
 .wonder {
-  width: 300px;
+  width: 200px;
 }
 
 .world-list {
   gap: 30px;
-}
-.wonder {
 }

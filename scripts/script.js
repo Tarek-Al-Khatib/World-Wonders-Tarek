@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(worldWonders);
     worldWonders.forEach((wonder) => {
       const div = document.createElement("div");
-      div.classList.add("wonder");
+      div.classList.add("wonder", "text-center");
       const h2 = document.createElement("h2");
       const p = document.createElement("p");
       p.innerHTML = wonder.summary;
