@@ -7,6 +7,25 @@ const fetchDetails = async () => {
   return response.data;
 };
 
-fetchDetails().then((data) => {
-  console.log(data);
+fetchDetails().then((wonder) => {
+  const details = document.getElementById("details");
+
+  details.innerHTML = `
+            <h1>${wonder.name}</h1>
+            <p>Summary:${wonder.summary}</p>
+            <p>Location: ${wonder.location}</p>
+            <p>Time Period: ${wonder.time_period}</p>
+            <p>Build Year: ${wonder.build_year}</p>
+            <div>
+              Images:<br>
+              ${wonder.links.images.map((image) => `<img src="${image}">`)}
+            </div>
+            <p>Links:</p>
+            <ul>
+              <li><a href="${wonder.links.wiki}">Wikipedia</a></li>
+              <li><a href="${wonder.links.britannica}">Britannica</a></li>
+              <li><a href="${wonder.links.trip_advisor}">Trip Advisor</a></li>
+              <li><a href="${wonder.links.google_maps}">Google Maps</a></li>
+            </ul>
+          `;
 });
