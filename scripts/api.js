@@ -3,5 +3,11 @@ const fetchWonders = async () => {
     "https://www.world-wonders-api.org/v0/wonders"
   );
 
-  console.log(response.data);
+  return response.data;
 };
+
+let worldWonders;
+
+fetchWonders().then((data) => {
+  worldWonders = data;
+});
