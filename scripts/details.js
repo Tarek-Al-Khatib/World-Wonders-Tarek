@@ -16,8 +16,7 @@ fetchDetails().then((wonder) => {
             <p>Location: ${wonder.location}</p>
             <p>Time Period: ${wonder.time_period}</p>
             <p>Build Year: ${wonder.build_year}</p>
-            <div>
-              Images:<br>
+            <div class="image-container flex horizontal-center">
               ${wonder.links.images.map((image) => `<img src="${image}">`)}
             </div>
             <p>Links:</p>
