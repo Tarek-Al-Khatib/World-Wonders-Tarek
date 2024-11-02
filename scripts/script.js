@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     worldWonders.forEach((wonder) => {
       const div = document.createElement("div");
       const viewMore = document.createElement("button");
-      viewMore.style.display = "block";
       viewMore.textContent = "View More";
-      viewMore.style.margin = "10px auto";
+      viewMore.classList.add("text-lavender-blush", "bg-space-cadet");
       //https://medium.com/@cyberbotmachines/how-to-pass-value-from-one-html-page-to-another-using-javascript-3c9ab62df4d
       viewMore.addEventListener("click", () => {
         let name = wonder.name.toLowerCase().replaceAll(" ", "-");

@@ -6,3 +6,14 @@
 .world-list {
   gap: 30px;
 }
+
+button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 18px;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #967aa1;
+}
