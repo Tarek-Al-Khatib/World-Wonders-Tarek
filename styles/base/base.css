@@ -35,3 +35,7 @@
 .vertical-center {
   align-items: center;
 }
+
+.padding {
+  padding: 20px;
+}
