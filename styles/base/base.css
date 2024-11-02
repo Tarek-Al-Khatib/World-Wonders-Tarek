@@ -39,3 +39,7 @@
 .padding {
   padding: 20px;
 }
+
+.wrap {
+  flex-wrap: wrap;
+}

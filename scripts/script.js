@@ -16,16 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(worldWonders);
     worldWonders.forEach((wonder) => {
       const div = document.createElement("div");
-      const ul = document.createElement("ul");
-      const li = document.createElement("li");
+      div.classList.add("wonder");
       const h2 = document.createElement("h2");
       const p = document.createElement("p");
       p.innerHTML = wonder.summary;
       h2.textContent = wonder.name;
       const link = document.createElement("a");
       link.href = wonder.links.wiki;
+      link.textContent = "Learn More";
       const image = document.createElement("img");
       image.src = wonder.links.images[1];
+
+      div.appendChild(image);
+      div.appendChild(h2);
+      div.appendChild(p);
+      div.appendChild(link);
+      worldList.appendChild(div);
     });
   });
 });
